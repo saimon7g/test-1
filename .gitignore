@@ -1,0 +1,16 @@
+# ignore temp cpp, python and java and executable files
+*.class
+*.o
+*.pyc
+*.exe
+*.out
+*.so
+*.dll
+*.swp
+*.swo
+*.swn
+*.swo
+*.temp
+*.tmp
+*.tmp.*
+*.txt
