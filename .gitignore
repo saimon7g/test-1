@@ -1,16 +1,8 @@
-# ignore temp cpp, python and java and executable files
-*.class
-*.o
-*.pyc
-*.exe
-*.out
-*.so
-*.dll
-*.swp
-*.swo
-*.swn
-*.swo
-*.temp
-*.tmp
-*.tmp.*
-*.txt
+# ignore all files in the root directory
+/*
+*
+
+# track  cpp java and py files only
+!*.cpp
+!*.java
+!*.py
