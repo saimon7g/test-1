@@ -105,8 +105,8 @@
               <!-- Contact Info -->
               <div>
                 <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                <p class="text-gray-400 mb-2">Email: your.email@example.com</p>
-                <p class="text-gray-400 mb-2">Phone: +1 234 567 890</p>
+                <p class="text-gray-400 mb-2">Email: nuruddin.simon@gmail.com</p>
+                <p class="text-gray-400 mb-2">Phone: +880 1871 809096</p>
                 <p class="text-gray-400">Location: Dhaka, Bangladesh</p>
               </div>
               
@@ -124,13 +124,13 @@
               <div>
                 <h3 class="text-lg font-semibold mb-4">Connect</h3>
                 <div class="flex space-x-4">
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://www.linkedin.com/in/Nur-Uddin-Ibne-Huda" class="text-gray-400 hover:text-white transition-colors">
                     <i class="fab fa-linkedin text-xl"></i>
                   </a>
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://github.com/saimon7g" class="text-gray-400 hover:text-white transition-colors">
                     <i class="fab fa-github text-xl"></i>
                   </a>
-                  <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://x.com/saimon7t" class="text-gray-400 hover:text-white transition-colors">
                     <i class="fab fa-twitter text-xl"></i>
                   </a>
                 </div>
@@ -139,7 +139,7 @@
               <!-- Copyright -->
               <div>
                 <h3 class="text-lg font-semibold mb-4">Legal</h3>
-                <p class="text-gray-400">© 2024 Your Name.</p>
+                <p class="text-gray-400">© 2024 Saimon</p>
                 <p class="text-gray-400">All rights reserved.</p>
               </div>
             </div>
@@ -157,6 +157,7 @@ import Publications from './components/Publications.vue'
 import Research from './components/Research.vue'
 import Education from './components/Education.vue'
 import Experience from './components/Experience.vue'
+import Resume from './components/Resume.vue'  // Add this line
 
 export default {
   name: 'App',
@@ -166,6 +167,7 @@ export default {
     Research,
     Education,
     Experience,
+    Resume,  // Add this line
   },
   setup() {
     const activeSection = ref('about')
@@ -177,6 +179,7 @@ export default {
       { id: 'publications', title: 'Publications', component: Publications },
       { id: 'education', title: 'Education', component: Education },
       { id: 'experience', title: 'Work Experience', component: Experience },
+      { id: 'resume', title: 'Resume', component: Resume },  // Add this line
     ]
 
     const toggleSidebar = () => {
