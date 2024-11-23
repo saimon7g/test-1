@@ -1,54 +1,50 @@
 <template>
-    <div class="max-w-6xl mx-auto h-full overflow-y-auto">
-        <h3 class="text-xl font-bold mb-2">
-            Bangladesh University of Engineering and Technology (BUET)
-        </h3>
-        <div class="flex">
-            <div class="text-gray-800">
-                <p class="mb-1">BACHELOR OF SCIENCE</p>
-                <p>Computer Science and Engineering</p>
-            </div>
-            <div class="flex-1">
-                <p class="italic text-right text-subtitle-gray text-l whitespace-nowrap">February 2020 - Running</p>
-                <div>
-                    <p class="text-gray-700 text-right">CGPA: 3.21/4.00</p> 
+    <div class="bg-white dark:bg-dark-bg p-4 lg:p-6 rounded-lg shadow max-w-6xl mx-auto">
+        <!-- University Section -->
+        <div class="mb-8">
+            <h3 class="text-xl lg:text-2xl font-bold mb-4 text-primary dark:text-dark-text">
+                Bangladesh University of Engineering and Technology (BUET)
+            </h3>
+            <div class="flex flex-col lg:flex-row lg:items-center mb-4">
+                <div class="text-primary dark:text-dark-text mb-2 lg:mb-0">
+                    <p class="mb-1">BACHELOR OF SCIENCE</p>
+                    <p>Computer Science and Engineering</p>
+                </div>
+                <div class="lg:flex-1 lg:text-right">
+                    <p class="italic text-secondary dark:text-dark-text-secondary">February 2020 - Running</p>
+                    <p class="text-primary dark:text-dark-text">CGPA: 3.21/4.00</p>
                 </div>
             </div>
         </div>
-        <div>
-            <!-- extra vertical gap -->
-            <div class="h-4"></div>
-            
-        </div>
 
-
-        <h3 class="text-xl font-bold mb-2">
-            Notre Dame College, Dhaka
-        </h3>
-        <div class="flex">
-            <div class="text-gray-800">
-                <p class="mb-1">Group: SCIENCE</p>
-            
-            </div>
-            <div class="flex-1">
-                <p class="italic text-right text-subtitle-gray text-l whitespace-nowrap">July 2017 - June 2019</p>
-                <div>
-                    <p class="text-gray-700 text-right">GPA: 5.00/5.00</p> 
+        <!-- College Section -->
+        <div class="mb-8">
+            <h3 class="text-xl lg:text-2xl font-bold mb-4 text-primary dark:text-dark-text">
+                Notre Dame College, Dhaka
+            </h3>
+            <div class="flex flex-col lg:flex-row lg:items-center">
+                <div class="text-primary dark:text-dark-text mb-2 lg:mb-0">
+                    <p class="mb-1">Group: SCIENCE</p>
+                </div>
+                <div class="lg:flex-1 lg:text-right">
+                    <p class="italic text-secondary dark:text-dark-text-secondary">July 2017 - June 2019</p>
+                    <p class="text-primary dark:text-dark-text">GPA: 5.00/5.00</p>
                 </div>
             </div>
         </div>
 
         <!-- Notable Courses Section -->
         <div>
-            <h4 class="text-xl font-bold mb-6 text-center">Notable Courses</h4>
-            <div class="grid grid-cols-2 gap-6">
+            <h4 class="text-xl lg:text-2xl font-bold mb-6 text-center text-primary dark:text-dark-text">Notable Courses
+            </h4>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                 <a v-for="course in courses" :key="course.code" :href="course.link"
-                    class="p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow bg-white flex flex-col ">
-                    <h5 class="font-bold text-lg mb-2 text-black">{{ course.code }}: {{ course.name }}</h5>
-                    <p class="text-sm text-gray-700 leading-relaxed">
+                    class="p-4 rounded-lg border border-secondary/20 dark:border-dark-text-secondary/20 hover:shadow-md transition-shadow bg-white dark:bg-dark-bg-secondary">
+                    <h5 class="font-bold text-lg mb-2 text-primary dark:text-dark-text">{{ course.code }}: {{
+                        course.name }}</h5>
+                    <p class="text-sm text-secondary dark:text-dark-text-secondary leading-relaxed">
                         <span v-for="(topic, index) in course.topics" :key="index">
-                            <span class="">{{ topic }}</span>
-                            <span v-if="index !== course.topics.length - 1">, </span>
+                            {{ topic }}<span v-if="index !== course.topics.length - 1">, </span>
                         </span>
                     </p>
                 </a>
@@ -142,10 +138,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-/* Add some custom transition for the hover effect */
-.course-card {
-    transition: all 0.2s ease-in-out;
-}
-</style>
