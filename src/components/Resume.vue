@@ -13,7 +13,7 @@
       </div>
   
       <!-- PDF Viewer -->
-      <div class="w-full h-[800px] border border-gray-200 rounded-lg overflow-hidden shadow-lg">
+      <div class="w-full h-[800px] border border-gray-200 rounded-lg overflow-hidden shadow-lg bg-white">
         <object
           data="/Nur_Uddin_Resume.pdf"
           type="application/pdf"
