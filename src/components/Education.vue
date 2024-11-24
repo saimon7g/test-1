@@ -75,19 +75,21 @@ export default {
           'C++',
           'Java',
           'Python',
-          'JavaScript'
+          'JavaScript',
+          'Shell Scripting',
+          'HTML/CSS',
+          'SQL',
         ],
-        'Web Technologies': [
+        'Frameworks & Libraries': [
           'ReactJS',
           'NextJS',
           'VueJS',
           'Django',
-          'HTML/CSS',
           'REST APIs',
           'Vite',
           'Tailwind CSS'
         ],
-        'Frameworks & Tools': [
+        'Tools': [
           'Git/Github',
           'Docker',
           'Linux',

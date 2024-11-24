@@ -175,10 +175,10 @@ export default {
       // { id: 'experience', title: 'Experience', component: Experience },
       { id: 'education', title: 'Education and Skills', component: Education },
       { id: 'projects', title: 'Projects', component: Projects },
+      { id: 'certificates', title: 'Certificates', component: Certificates },
       { id: 'courses', title: 'Notable Courses', component: Courses },
       // { id: 'research', title: 'Research Experience', component: Research },
       // { id: 'publications', title: 'Publications', component: Publications },
-      { id: 'certificates', title: 'Certificates', component: Certificates },
       { id: 'resume', title: 'Resume', component: Resume },
     ]
 
