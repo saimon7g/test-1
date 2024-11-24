@@ -1,5 +1,11 @@
 <template>
-    <div class="bg-white dark:bg-dark-bg p-4 lg:p-6 rounded-lg shadow max-w-6xl mx-auto">
+  <div class="bg-white dark:bg-dark-bg p-4 lg:p-6 rounded-lg shadow max-w-6xl mx-auto">
+    <!-- Education Section -->
+    <div class="mb-12">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-primary dark:text-dark-text border-b pb-2">
+        Education
+      </h2>
+
       <!-- University Section -->
       <div class="mb-8">
         <h3 class="text-xl lg:text-2xl font-bold mb-4 text-primary dark:text-dark-text">
@@ -16,7 +22,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- College Section -->
       <div>
         <h3 class="text-xl lg:text-2xl font-bold mb-4 text-primary dark:text-dark-text">
@@ -33,10 +39,80 @@
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'Education'
+
+    <!-- Skills Section -->
+    <div>
+      <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-primary dark:text-dark-text border-b pb-2">
+        Technical Skills
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Dynamically render skill categories -->
+        <div v-for="(skills, category) in skillsData" :key="category" class="mb-6">
+          <h3 class="text-lg font-semibold mb-3 text-primary dark:text-dark-text">
+            {{ category }}
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span v-for="skill in skills" :key="skill"
+              class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm">
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Education',
+  data() {
+    return {
+      skillsData: {
+        'Programming Languages': [
+          'C',
+          'C++',
+          'Java',
+          'Python',
+          'JavaScript'
+        ],
+        'Web Technologies': [
+          'ReactJS',
+          'NextJS',
+          'VueJS',
+          'Django',
+          'HTML/CSS',
+          'REST APIs',
+          'Vite',
+          'Tailwind CSS'
+        ],
+        'Frameworks & Tools': [
+          'Git/Github',
+          'Docker',
+          'Linux',
+          'Bash',
+          'OpenGL',
+          'JavaFX',
+          'Cisco Packet Tracer',
+          'NS-3',
+          'Bison',
+          'Flex'
+        ],
+        'Database': [
+          'Oracle',
+          'MySQL',
+          'Django ORM'
+        ],
+        'Data Science & ML': [
+          'TensorFlow',
+          'PyTorch',
+          'Scikit-learn',
+          'Pandas',
+          'NumPy'
+        ]
+      }
+    }
   }
-  </script>
+}
+</script>

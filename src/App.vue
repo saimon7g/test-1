@@ -1,32 +1,48 @@
 <template>
   <div class="flex min-h-screen bg-gray-100 dark:bg-dark-bg relative">
-    <!-- Mobile Menu Button - unchanged -->
+    <!-- Mobile Menu Button -->
     <button @click="toggleSidebar" class="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-gray-900 text-white">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
 
-    <!-- Overlay for mobile - unchanged -->
+    <!-- Overlay for mobile -->
     <div v-if="isSidebarOpen" @click="toggleSidebar" class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"></div>
 
-    <!-- Sidebar - unchanged -->
+    <!-- Sidebar -->
     <aside :class="[
       'bg-gray-900 dark:bg-dark-bg-secondary text-white fixed h-full z-50 transition-transform duration-300 ease-in-out',
       'w-72 lg:translate-x-0',
       isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
     ]">
-      <div class="flex flex-col items-center pt-12 pb-8">
+      <div class="flex flex-col items-center pt-12 pb-4">
         <div class="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden mb-4">
           <img src="./assets/saimon.jpg" alt="Profile" class="w-full h-full object-cover" />
         </div>
         <h2 class="text-lg lg:text-xl font-semibold mb-1">Nur Uddin Ibne Huda</h2>
         <p class="text-xs lg:text-sm text-gray-400">Final Year CSE Student, BUET</p>
-        <p class="text-xs lg:text-sm text-gray-400">Dhaka, Bangladesh</p>
+        <p class="text-xs lg:text-sm text-gray-400 mb-4">Dhaka, Bangladesh</p>
+
+        <!-- Social Icons Section -->
+        <div class="flex space-x-6 mb-6">
+          <a href="https://github.com/saimon7g" class="text-gray-400 hover:text-white transition-colors" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/Nur-Uddin-Ibne-Huda"
+            class="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="#resume" @click="navigateToSection('resume')"
+            class="text-gray-400 hover:text-white transition-colors">
+            <i class="fas fa-file-alt text-2xl"></i>
+          </a>
+        </div>
       </div>
 
       <!-- Navigation Links -->
-      <nav class="flex flex-col w-full mt-8">
+      <nav class="flex flex-col w-full mt-4">
         <a v-for="section in sections" :key="section.id" @click="navigateToSection(section.id)"
           class="relative py-2 px-8 text-sm cursor-pointer transition-all duration-200 select-none" :class="[
             activeSection === section.id
@@ -62,14 +78,14 @@
           </section>
         </div>
 
-        <!-- Single Footer -->
+        <!-- Footer -->
         <footer class="w-full bg-gray-900 dark:bg-dark-bg-secondary text-white py-8 px-4">
           <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <!-- Contact Info -->
               <div>
                 <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                <p class="text-gray-400 mb-2">Email: nuruddin.simon@gmail.com</p>
+                <p class="text-gray-400 mb-2">Email: nuruddin(dot)simon(at)gmail(dot)com</p>
                 <p class="text-gray-400 mb-2">Phone: +880 1871 809096</p>
                 <p class="text-gray-400">Location: Dhaka, Bangladesh</p>
               </div>
@@ -102,11 +118,14 @@
                 </div>
               </div>
 
-              <!-- Copyright -->
+              <!-- Source Code -->
               <div>
-                <h3 class="text-lg font-semibold mb-4">Legal</h3>
-                <p class="text-gray-400">© 2024 Saimon</p>
-                <p class="text-gray-400">All rights reserved.</p>
+                <h3 class="text-lg font-semibold mb-4">Source Code</h3>
+                <a href="https://github.com/saimon7g" target="_blank" rel="noopener noreferrer"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center">
+                  <i class="fab fa-github mr-2"></i>
+                  Visit my GitHub for source code
+                </a>
               </div>
             </div>
           </div>
@@ -126,6 +145,7 @@ import Courses from './components/Courses.vue'
 import Experience from './components/Experience.vue'
 import Projects from './components/Projects.vue'
 import Resume from './components/Resume.vue'
+import Certificates from './components/Certificates.vue'
 
 export default {
   name: 'App',
@@ -138,6 +158,7 @@ export default {
     Experience,
     Projects,
     Resume,
+    Certificates
   },
   setup() {
     const activeSection = ref('about')
@@ -152,11 +173,12 @@ export default {
     const sections = [
       { id: 'about', title: 'About', component: About },
       // { id: 'experience', title: 'Experience', component: Experience },
-      { id: 'education', title: 'Education', component: Education },
-      { id: 'courses', title: 'Notable Courses', component: Courses },
+      { id: 'education', title: 'Education and Skills', component: Education },
       { id: 'projects', title: 'Projects', component: Projects },
-      { id: 'research', title: 'Research Experience', component: Research },
+      { id: 'courses', title: 'Notable Courses', component: Courses },
+      // { id: 'research', title: 'Research Experience', component: Research },
       // { id: 'publications', title: 'Publications', component: Publications },
+      { id: 'certificates', title: 'Certificates', component: Certificates },
       { id: 'resume', title: 'Resume', component: Resume },
     ]
 
