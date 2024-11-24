@@ -151,12 +151,12 @@ export default {
 
     const sections = [
       { id: 'about', title: 'About', component: About },
-      { id: 'experience', title: 'Experience', component: Experience },
+      // { id: 'experience', title: 'Experience', component: Experience },
       { id: 'education', title: 'Education', component: Education },
       { id: 'courses', title: 'Notable Courses', component: Courses },
       { id: 'projects', title: 'Projects', component: Projects },
       { id: 'research', title: 'Research Experience', component: Research },
-      { id: 'publications', title: 'Publications', component: Publications },
+      // { id: 'publications', title: 'Publications', component: Publications },
       { id: 'resume', title: 'Resume', component: Resume },
     ]
 
