@@ -103,6 +103,7 @@ export default {
         ],
         'Database': [
           'Oracle',
+          'PostgreSQL',
           'MySQL',
           'Django ORM'
         ],
