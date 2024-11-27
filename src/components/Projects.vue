@@ -40,35 +40,35 @@ export default {
       },
       {
         name: "Bangla Image Caption Generator",
-        organization: "CSE-471,Machine Learning Sessional",
+        organization: "Machine Learning Sessional",
         description: "Developed a Bangla image caption generator using CNN-LSTM architecture with TensorFlow and Keras. Trained on custom Bangla image-caption dataset with 10k+ images and captions. Implemented image preprocessing with OpenCV, feature extraction with pre-trained VGG16, and caption generation with LSTM. Achieved BLEU score of 0.75+ with beam search decoding and attention mechanism. Features include real-time image captioning, interactive caption editing, and custom dataset creation.",
         tech: "Python, TensorFlow, Keras, OpenCV, VGG16, LSTM, BLEU Score",
         github: "https://github.com/saimon7g/CSE-102-Project",
       },
       {
         name: "Mini C Compiler",
-        organization: "CSE-310, Compiler Sessional",
+        organization: "Compiler Sessional",
         description: "Developed a compiler for a subset of C programming language through a series of modular components. Built a robust symbol table using custom hash implementation and scope management. Created lexical analyzer with Flex for token recognition and error detection. Implemented syntax & semantic analyzer using Bison with comprehensive type checking and validation. Generated optimized 8086 assembly code with stack-based memory management, peephole optimizations, and support for control structures and function calls. Features include detailed error reporting, scope analysis, and integrated println function.",
         tech: "C++, Flex, Bison, YACC, 8086 Assembly",
         github: "https://github.com/saimon7g/CSE-310-Compiler-Design"  // Replace with your repo link
       },
       {
         name: "Railway E-Ticket Reservation System",
-        organization: "CSE Database Project",
+        organization: "Database Design Project",
         description: "Designed and implemented a comprehensive railway reservation database system with Django and Oracle. Created complex database architecture including transaction management, real-time seat availability tracking, and automated reservation timeout triggers. Implemented intricate SQL queries for station-to-station fare calculation, multi-class seat management, and booking validations. Features include secure user authentication, interactive seat selection, and integrated payment verification system.",
         tech: "Oracle Database, Django, Python, SQL, PL/SQL Triggers",
         github: "https://github.com/saimon7g/Railway-Ticket"  // Add your actual repo link
       },
       {
         name: "Football Transfer Market System",
-        organization: "CSE-108, Object Oriented Programming Sessional",
+        organization: "Object Oriented Programming Sessional",
         description: "Built a real-time football transfer market system with multi-club support using socket programming. Implemented features like club-based authentication, live player trading between multiple clubs, market monitoring, and club analytics. Designed with multi-threaded server to handle concurrent club connections and JavaFX-based responsive UI.",
         tech: "Java, JavaFX, Socket Programming, Multi-threading, File I/O",
         github: "https://github.com/saimon7g/CSE-108-Project"  // Add your actual repo link here
       },
       {
         name: "DX-ball Game Recreation",
-        organization: "CSE-102, Structured Programming Language Sessional",
+        organization: "Structured Programming Language Sessional",
         description: "Recreated classic DX-ball game using OpenGL and iGraphics. Implemented complex collision, power-ups (fireball, paddle modifications), 4-level system with unique patterns, and save/load functionality. Features include progressive difficulty, multi-ball system, and high score tracking. Used struct-based object management, timer-based animations, and binary file I/O for game state persistence.",
         tech: "C, OpenGL, iGraphics Library",
         github: "https://github.com/saimon7g/CSE-102-Project", // Add your actual GitHub repo link here

@@ -18,7 +18,7 @@
     ]">
       <div class="flex flex-col items-center pt-12 pb-4">
         <div class="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden mb-4">
-          <img src="./assets/saimon.jpg" alt="Profile" class="w-full h-full object-cover" />
+          <img src="./assets/saimon3.jpg" alt="Profile" class="w-full h-full object-cover" />
         </div>
         <h2 class="text-lg lg:text-xl font-semibold mb-1">Nur Uddin Ibne Huda</h2>
         <p class="text-xs lg:text-sm text-gray-400">Final Year CSE Student, BUET</p>
