@@ -41,7 +41,7 @@ export default {
       {
         name: "Bangla Image Caption Generator",
         organization: "Machine Learning Sessional",
-        description: "Developed a Bangla image caption generator using CNN-LSTM architecture with TensorFlow and Keras. Trained on custom Bangla image-caption dataset with 10k+ images and captions. Implemented image preprocessing with OpenCV, feature extraction with pre-trained VGG16, and caption generation with LSTM. Achieved BLEU score of 0.75+ with beam search decoding and attention mechanism. Features include real-time image captioning, interactive caption editing, and custom dataset creation.",
+        description: "Developed a Bangla image caption generator using CNN-LSTM architecture with TensorFlow and Keras. Trained on custom Bangla image-caption dataset with 47k+ images and captions. Implemented image preprocessing with OpenCV, feature extraction with pre-trained VGG16, and caption generation with LSTM. Achieved BLEU score of 0.75+ with beam search decoding and attention mechanism. Features include real-time image captioning, interactive caption editing, and custom dataset creation.",
         tech: "Python, TensorFlow, Keras, OpenCV, VGG16, LSTM, BLEU Score",
         github: "https://github.com/saimon7g/CSE-102-Project",
       },

@@ -17,8 +17,8 @@
             <p>Computer Science and Engineering</p>
           </div>
           <div class="lg:flex-1 lg:text-right">
-            <p class="italic text-secondary dark:text-dark-text-secondary">February 2020 - Running</p>
-            <p class="text-primary dark:text-dark-text">CGPA: 3.21/4.00</p>
+            <p class="italic text-secondary dark:text-dark-text-secondary">February 2020 - March 2025</p>
+            <p class="text-primary dark:text-dark-text">CGPA: 3.25/4.00</p>
           </div>
         </div>
       </div>
@@ -38,6 +38,22 @@
           </div>
         </div>
       </div>
+
+      <div>
+        <h3 class="text-xl lg:text-2xl font-bold mb-4 text-primary dark:text-dark-text">
+          Sonagazi Md. Saber Pilot High School, Feni
+        </h3>
+        <div class="flex flex-col lg:flex-row lg:items-center">
+          <div class="text-primary dark:text-dark-text mb-2 lg:mb-0">
+            <p class="mb-1">Group: SCIENCE</p>
+          </div>
+          <div class="lg:flex-1 lg:text-right">
+            <p class="italic text-secondary dark:text-dark-text-secondary">July 2017 - June 2019</p>
+            <p class="text-primary dark:text-dark-text">GPA: 5.00/5.00</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Skills Section -->
@@ -78,15 +94,14 @@ export default {
           'JavaScript',
           'Shell Scripting',
           'HTML/CSS',
-          'SQL',
         ],
         'Frameworks & Libraries': [
           'ReactJS',
           'NextJS',
+          'Flutter',
           'VueJS',
           'Django',
           'REST APIs',
-          'Vite',
           'Tailwind CSS'
         ],
         'Tools': [
@@ -108,8 +123,11 @@ export default {
           'Django ORM'
         ],
         'Data Science & ML': [
-          'TensorFlow',
           'PyTorch',
+          'OpenCV',
+          'Vision Transformers',
+          'TensorFlow',
+          'Keras',
           'Scikit-learn',
           'Pandas',
           'NumPy'

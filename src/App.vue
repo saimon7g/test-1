@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-screen bg-gray-100 dark:bg-dark-bg relative">
     <!-- Mobile Menu Button -->
-    <button @click="toggleSidebar" class="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-gray-900 text-white">
+    <button @click="toggleSidebar" class="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-gradient-to-r from-gray-400 to-gray-700 dark:from-gray-900 dark:to-black text-white">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -12,30 +12,30 @@
 
     <!-- Sidebar -->
     <aside :class="[
-      'bg-gray-900 dark:bg-dark-bg-secondary text-white fixed h-full z-50 transition-transform duration-300 ease-in-out',
+      'bg-gradient-to-b from-gray-400 to-gray-700 dark:from-gray-900 dark:to-black text-white fixed h-full z-50 transition-transform duration-300 ease-in-out',
       'w-72 lg:translate-x-0',
       isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
     ]">
       <div class="flex flex-col items-center pt-12 pb-4">
-        <div class="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden mb-4">
+        <div class="w-24 h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden mb-4 border-4 border-white dark:border-gray-700 shadow-md">
           <img src="./assets/saimon3.jpg" alt="Profile" class="w-full h-full object-cover" />
         </div>
         <h2 class="text-lg lg:text-xl font-semibold mb-1">Nur Uddin Ibne Huda</h2>
-        <p class="text-xs lg:text-sm text-gray-400">Final Year CSE Student, BUET</p>
-        <p class="text-xs lg:text-sm text-gray-400 mb-4">Dhaka, Bangladesh</p>
+        <p class="text-xs lg:text-sm text-gray-200 dark:text-gray-300">CS Graduate, BUET</p>
+        <p class="text-xs lg:text-sm text-gray-200 dark:text-gray-300 mb-4">Dhaka, Bangladesh</p>
 
         <!-- Social Icons Section -->
         <div class="flex space-x-6 mb-6">
-          <a href="https://github.com/saimon7g" class="text-gray-400 hover:text-white transition-colors" target="_blank"
+          <a href="https://github.com/saimon7g" class="text-gray-200 dark:text-gray-300 hover:text-white transition-colors" target="_blank"
             rel="noopener noreferrer">
             <i class="fab fa-github text-2xl"></i>
           </a>
           <a href="https://www.linkedin.com/in/Nur-Uddin-Ibne-Huda"
-            class="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+            class="text-gray-200 dark:text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin text-2xl"></i>
           </a>
           <a href="#resume" @click="navigateToSection('resume')"
-            class="text-gray-400 hover:text-white transition-colors">
+            class="text-gray-200 dark:text-gray-300 hover:text-white transition-colors">
             <i class="fas fa-file-alt text-2xl"></i>
           </a>
         </div>
@@ -47,10 +47,10 @@
           class="relative py-2 px-8 text-sm cursor-pointer transition-all duration-200 select-none" :class="[
             activeSection === section.id
               ? 'text-white'
-              : 'text-gray-400 hover:text-white'
+              : 'text-gray-200 dark:text-gray-300 hover:text-white'
           ]">
           <div v-if="activeSection === section.id"
-            class="absolute left-0 top-0 w-full h-full bg-gray-800 dark:bg-dark-bg transition-all duration-300"
+            class="absolute left-0 top-0 w-full h-full bg-black bg-opacity-30 dark:bg-black dark:bg-opacity-50 transition-all duration-300"
             style="z-index: -1;"></div>
 
           {{ section.title.toUpperCase() }}
@@ -64,11 +64,43 @@
       'w-full lg:ml-72'
     ]">
       <div class="flex flex-col min-h-screen">
+        <!-- Hero Banner Section -->
+        <div class="w-full bg-gradient-to-r from-gray-400 to-gray-700 dark:from-gray-900 dark:to-black">
+          <div class="max-w-6xl mx-auto px-4 py-16 lg:py-20">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="w-full md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+                <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">Nur Uddin Ibne Huda</h1>
+                <p class="text-xl text-gray-300 mb-6">Computer Science Engineer | AI Enthusiast | Software Developer</p>
+                <p class="text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+                  Fresh graduate CS student from BUET with a focus on AI and Software Security. Passionate about solving complex problems and exploring cutting-edge technologies.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                  <a href="https://github.com/saimon7g" target="_blank" rel="noopener noreferrer"
+                     class="px-6 py-3 bg-transparent border border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors flex items-center">
+                    <i class="fab fa-github mr-2"></i>
+                    GitHub
+                  </a>
+                  <a href="#resume" @click="navigateToSection('resume')" 
+                     class="px-6 py-3 bg-transparent border border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors flex items-center">
+                    <i class="fas fa-file-alt mr-2"></i>
+                    Resume
+                  </a>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 flex justify-center">
+                <div class="w-56 h-56 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
+                  <img src="./assets/saimon2.jpg" alt="Profile" class="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Sections Container -->
         <div class="flex-1">
           <section v-for="section in sections" :key="section.id" :id="section.id"
-            class="min-h-screen w-full pt-16 lg:pt-0">
-            <div class="h-full p-4 lg:p-8">
+            class="w-full pt-16 lg:pt-24 pb-16 border-b border-gray-200 dark:border-gray-800 last:border-0">
+            <div class="p-4 lg:p-8">
               <h2
                 class="text-2xl lg:text-3xl font-bold mb-6 lg:mb-8 p-4 rounded text-center text-gray-800 dark:text-gray-200">
                 {{ section.title }}
@@ -79,24 +111,24 @@
         </div>
 
         <!-- Footer -->
-        <footer class="w-full bg-gray-900 dark:bg-dark-bg-secondary text-white py-8 px-4">
+        <footer class="w-full bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-900 dark:to-black text-white py-8 px-4">
           <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <!-- Contact Info -->
               <div>
                 <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                <p class="text-gray-400 mb-2">Email: nuruddin(dot)simon(at)gmail(dot)com</p>
-                <p class="text-gray-400 mb-2">Phone: +880 1871 809096</p>
-                <p class="text-gray-400">Location: Dhaka, Bangladesh</p>
+                <p class="text-gray-300 mb-2">Email: nuruddin(dot)simon(at)gmail(dot)com</p>
+                <p class="text-gray-300 mb-2">Phone: +880 1871 809096</p>
+                <p class="text-gray-300">Location: Dhaka, Bangladesh</p>
               </div>
 
               <!-- Quick Links -->
               <div>
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                  <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                  <li><a href="#research" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
-                  <li><a href="#publications" class="text-gray-400 hover:text-white transition-colors">Publications</a>
+                  <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                  <li><a href="#research" class="text-gray-300 hover:text-white transition-colors">Research</a></li>
+                  <li><a href="#publications" class="text-gray-300 hover:text-white transition-colors">Publications</a>
                   </li>
                 </ul>
               </div>
@@ -106,13 +138,13 @@
                 <h3 class="text-lg font-semibold mb-4">Connect</h3>
                 <div class="flex space-x-4">
                   <a href="https://www.linkedin.com/in/Nur-Uddin-Ibne-Huda"
-                    class="text-gray-400 hover:text-white transition-colors">
+                    class="text-gray-300 hover:text-white transition-colors">
                     <i class="fab fa-linkedin text-xl"></i>
                   </a>
-                  <a href="https://github.com/saimon7g" class="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://github.com/saimon7g" class="text-gray-300 hover:text-white transition-colors">
                     <i class="fab fa-github text-xl"></i>
                   </a>
-                  <a href="https://x.com/saimon7t" class="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://x.com/saimon7t" class="text-gray-300 hover:text-white transition-colors">
                     <i class="fab fa-twitter text-xl"></i>
                   </a>
                 </div>
@@ -122,7 +154,7 @@
               <div>
                 <h3 class="text-lg font-semibold mb-4">Source Code</h3>
                 <a href="https://github.com/saimon7g" target="_blank" rel="noopener noreferrer"
-                  class="text-gray-400 hover:text-white transition-colors flex items-center">
+                  class="text-gray-300 hover:text-white transition-colors flex items-center">
                   <i class="fab fa-github mr-2"></i>
                   Visit my GitHub for source code
                 </a>
@@ -172,12 +204,12 @@ export default {
 
     const sections = [
       { id: 'about', title: 'About', component: About },
-      // { id: 'experience', title: 'Experience', component: Experience },
+      { id: 'experience', title: 'Experience', component: Experience },
       { id: 'education', title: 'Education and Skills', component: Education },
       { id: 'projects', title: 'Projects', component: Projects },
       { id: 'certificates', title: 'Certificates', component: Certificates },
       { id: 'courses', title: 'Notable Courses', component: Courses },
-      // { id: 'research', title: 'Research Experience', component: Research },
+      { id: 'research', title: 'Research Experience', component: Research },
       // { id: 'publications', title: 'Publications', component: Publications },
       { id: 'resume', title: 'Resume', component: Resume },
     ]
@@ -228,9 +260,19 @@ html {
   background: #555;
 }
 
+section {
+  scroll-margin-top: 80px;
+}
+
 @media (max-width: 1024px) {
   html {
     scroll-padding-top: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    scroll-margin-top: 0;
   }
 }
 </style>

@@ -28,22 +28,16 @@
         setup() {
             const research = [
                 {
-                    title: 'Detecting Sentiment in Anonymous Submissions: A Study on User Report Data',
-                    collaborators: 'Saman Sadia Saman, MD Tousif Tanjim Anan, Mehedi Hasan, Tanzim Hossain Romel, Muhammad Nasif Imtiaz, Ishika Tarin, Afroza Parvin Disa, Tarik Reza Toha, Jannatun Noor, A. B. M. Alim Al Islam',
-                    description: "In this project, we conduct sentiment analysis on crowdsourced, anonymously submitted reports to explore the range and intensity of emotions individuals express when given a platform for open, confidential communication. By performing quantitative analysis across multiple machine learning models, we aim to identify trends in sentiment, uncovering which emotions — such as hatred, anger, relief, or hope — are most commonly conveyed in anonymous complaints. Insights from this study could be valuable for organizations seeking to better understand and respond to community feedback while maintaining the privacy of their contributors.",
-                    year: 2024
-                },
-                {
-                    title: 'VLSI Layout Design of Bidirectional Shift Register using Open Source EDA Tools',
-                    collaborators: 'Muhammad Nasif Imtiaz, MD. Arafat Hossain, Aman Ray',
-                    description: "In this project, we designed and implemented a VLSI layout for a Bidirectional/Circular Shift Register using open-source Electronic Design Automation (EDA) tools. The researchers developed a versatile digital circuit that can function as both a bidirectional shift register and a bidirectional circular shift register, with direction control for left and right shifting operations. The work utilizes Verilog Hardware Description Language (HDL) for implementation and employs the Qflow toolchain along with various open-source tools including Yosys, Graywolf, OpenSTA, QRouter, Netgen, and Magic for the physical layout design. The researchers first implemented and verified the Register Transfer Level (RTL) code through testbenches and waveform analysis using GTKWave. They then generated a gate-level netlist and optimized the VLSI layout using standard cell libraries. The study also includes power consumption analysis, examining how supply voltage and clock frequency affect the circuit's average power consumption. Results show an upward trend in power consumption with increasing supply voltage and a downward trend with increasing clock frequency. The research demonstrates the feasibility and effectiveness of using open-source EDA tools for implementing complex digital circuits, providing a cost-effective alternative to proprietary tools while maintaining design efficiency and optimization.",
-                    year: 2023
+                    title: 'Enhancing Conversational AI with Domain Adaptation of Retrieval-Augmented Generation (RAG) Models for Fitness and Nutrition',
+                    collaborators: 'Md. Shahriyar Muhaymeen, Nur Uddin Ibne Huda, Md. Jarif Ahsan, Md. Mostofa Akbar',
+                    description: "This research explores domain adaptation techniques to enhance Retrieval-Augmented Generation (RAG) models for fitness and nutrition consultation. While Large Language Models (LLMs) exhibit strong generative capabilities, they often struggle with factual accuracy in specialized domains and are prone to hallucinations. To address these challenges, we constructed a domain-specific dataset of over 10,000 curated items covering nutritional values and fitness information, and generated 17,354 verified question-answer pairs. We evaluated four distinct RAG architectures, including RAG-Original, RAG-Finetuned-QA, RAG-DPR-Adapted, and Fusion-in-Decoder, to assess their effectiveness in generating accurate responses for health-related queries. Our evaluation demonstrated that fine-tuning RAG models with domain-specific data significantly improved retrieval accuracy and response reliability, with domain-adapted models achieving higher Exact Match (EM) and F1 scores compared to baseline approaches. The findings highlight the potential of domain-adapted RAG models in developing reliable AI-driven assistants for fitness and nutrition guidance through the integration of retrieval mechanisms with generative capabilities.",
+                    year: 2025
                 }
             ]
     
             const formatCollaborators = (collaborators) => {
                 return collaborators.split(', ').map(name => {
-                    if (name.includes('Muhammad Nasif Imtiaz')) {
+                    if (name.includes('Nur Uddin Ibne Huda')) {
                         return `<strong class="text-primary dark:text-dark-text">${name}</strong>`;
                     }
                     return name;
