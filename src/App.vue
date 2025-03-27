@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-screen bg-gray-100 dark:bg-dark-bg relative">
     <!-- Mobile Menu Button -->
-    <button @click="toggleSidebar" class="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-gradient-to-r from-gray-400 to-gray-700 dark:from-gray-900 dark:to-black text-white">
+    <button @click="toggleSidebar" class="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-gradient-to-r from-gray-900 to-gray-950 dark:from-gray-900 dark:to-gray-950 text-white">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -12,7 +12,7 @@
 
     <!-- Sidebar -->
     <aside :class="[
-      'bg-gradient-to-b from-gray-400 to-gray-700 dark:from-gray-900 dark:to-black text-white fixed h-full z-50 transition-transform duration-300 ease-in-out',
+      'bg-gradient-to-b from-gray-400 to-gray-900 dark:from-gray-450 dark:to-gray-950 text-white fixed h-full z-50 transition-transform duration-300 ease-in-out',
       'w-72 lg:translate-x-0',
       isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
     ]">
@@ -50,7 +50,7 @@
               : 'text-gray-200 dark:text-gray-300 hover:text-white'
           ]">
           <div v-if="activeSection === section.id"
-            class="absolute left-0 top-0 w-full h-full bg-black bg-opacity-30 dark:bg-black dark:bg-opacity-50 transition-all duration-300"
+            class="absolute left-0 top-0 w-full h-full bg-black bg-opacity-30 dark:bg-gray-900 dark:bg-opacity-70 transition-all duration-300"
             style="z-index: -1;"></div>
 
           {{ section.title.toUpperCase() }}
@@ -65,12 +65,22 @@
     ]">
       <div class="flex flex-col min-h-screen">
         <!-- Hero Banner Section -->
-        <div class="w-full bg-gradient-to-r from-gray-400 to-gray-700 dark:from-gray-900 dark:to-black">
+        <div class="w-full bg-gradient-to-r from-gray-400 to-gray-900 dark:from-gray-450 dark:to-black">
           <div class="max-w-6xl mx-auto px-4 py-16 lg:py-20">
             <div class="flex flex-col md:flex-row items-center justify-between">
               <div class="w-full md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
                 <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">Nur Uddin Ibne Huda</h1>
+
                 <p class="text-xl text-gray-300 mb-6">Computer Science Engineer | AI Enthusiast | Software Developer</p>
+                
+                <!-- Mobile Profile Photo (Only visible on mobile) -->
+                <div class="md:hidden mx-auto mb-6">
+                  <div class="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-700 shadow-lg mx-auto">
+                    <img src="./assets/saimon2.jpg" alt="Profile" class="w-full h-full object-cover" />
+                  </div>
+                </div>
+                
+               
                 <p class="text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
                   Fresh graduate CS student from BUET with a focus on AI and Software Security. Passionate about solving complex problems and exploring cutting-edge technologies.
                 </p>
@@ -87,7 +97,8 @@
                   </a>
                 </div>
               </div>
-              <div class="w-full md:w-1/2 flex justify-center">
+              <!-- Desktop Profile Photo (Only visible on desktop) -->
+              <div class="w-full md:w-1/2 hidden md:flex justify-center">
                 <div class="w-56 h-56 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
                   <img src="./assets/saimon2.jpg" alt="Profile" class="w-full h-full object-cover" />
                 </div>
@@ -111,7 +122,7 @@
         </div>
 
         <!-- Footer -->
-        <footer class="w-full bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-900 dark:to-black text-white py-8 px-4">
+        <footer class="w-full bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-800 dark:to-gray-950 text-white py-8 px-4">
           <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <!-- Contact Info -->

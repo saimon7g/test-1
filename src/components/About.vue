@@ -3,7 +3,7 @@
         <p class="text-primary dark:text-dark-text leading-relaxed mb-4 lg:mb-6">
             I am a recent Computer Science and Engineering (CSE) graduate from Bangladesh University of Engineering and Technology
             (BUET). Currently, I am working as a Software Engineer at Bengal Mobile QA Solution. Throughout my academic journey, I have developed a keen interest in areas such as Artificial Intelligence, 
-            Machine Learning, and Software Security, which continue to drive my professional pursuits.
+            Machine Learning, Software Security and Distributed Systems  which continue to drive my professional pursuits.
         </p>
         <p class="text-primary dark:text-dark-text mb-4 lg:mb-6">
             My current research and projects explore cutting-edge technologies, with recent work centered on leveraging
