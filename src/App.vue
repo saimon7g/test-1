@@ -82,7 +82,7 @@
                 
                
                 <p class="text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
-                  Fresh graduate CS student from BUET with a focus on AI and Software Security. Passionate about solving complex problems and exploring cutting-edge technologies.
+                  CS graduate from BUET with a focus on AI and Software Security. Passionate about solving complex problems and exploring cutting-edge technologies.
                 </p>
                 <div class="flex justify-center md:justify-start space-x-4">
                   <a href="https://github.com/saimon7g" target="_blank" rel="noopener noreferrer"
